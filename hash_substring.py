@@ -25,7 +25,7 @@ def get_occurrences(pattern, text):
 
         sub = text[i:i + patternSize]
         hashh = hash(sub)
-        textHash.append(hash)
+        textHash.append(hashh)
 
     hashLength = len(textHash)
     outprint = []
