@@ -1,17 +1,14 @@
 # python3
 
 def read_input():
-    
     letter = input()
 
     if 'I' in letter:
-
         return (input().rstrip(), input().rstrip())
 
     elif 'F' in letter:
 
         with open("tests/06") as file:
-
             return (file.readline().rstrip(), file.readline().rstrip())
         
 
@@ -26,8 +23,8 @@ def get_occurrences(pattern, text):
     textHash = []
     for i in range(textLength - patternSize + 1):
 
-        substring = text[i:i + patternSize]
-        hash = hash(substring)
+        sub = text[i:i + patternSize]
+        hashh = hash(sub)
         textHash.append(hash)
 
     hashLength = len(textHash)
@@ -39,7 +36,6 @@ def get_occurrences(pattern, text):
     for i in range(hashLength):
          
          if patternHash == textHash[i] and text[i:i + patternSize] == pattern:
-
             outprint.append(i)
 
     return outprint 
